@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <title>Até Cair | Player Drink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="header-banner">
+            <h1 class="header-title">Até <br> Cair</h1>
+            <span id="header-icon"class="iconify" data-icon="twemoji:clinking-beer-mugs"></span>
+        </div>
+
+        <div class="separator">
+            <hr>
+        </div>
+
+        <div class="header-subtitle">
+            <h2>Perguntas e Respostas</h2>
+        </div>
+    </header>
+
+    <section class="rules-wrapper">
+        <div class="rules-title">
+            <h4> Regras</h4>
+        </div>
+        <ul class="rules-items">
+            <li><b>1.</b> Se o desafio for negado, a pessoa bebe 2 shots.</li><br>
+            <li><b>2.</b> Se o desafio envolver terceiros, e o mesmo negar, ele bebe 1 shot.</li><br>
+            <li><b>3.</b> O intuito do jogo é se divertir, ninguém é obrigado a nada, mas se você não for aberto a brincadeiras, não entre no jogo!</li><br>
+            <li><b>4.</b> Se beber, não dirija!</li>
+        </ul>
+    </section>
+
+    <section class="button-wrapper">
+        <a href="action.html">Começar</a>
+    </section>
+</body>
+</html>
+
+<style>
+    :root {
+    --font1: 'Indie Flower', serif;
+    --font2: 'Lato', serif;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin-top: 1rem;
+        background: #121212;
+        width: 100%;
+    }
+
+    button {
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        color: #fff;
+    }
+
+    .header-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-banner > h1{
+        font-family: var(--font1);
+        font-size: 3rem;
+    }
+
+    .header-banner > svg{
+        font-size: 5.5rem;
+    }
+
+    .separator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .separator > hr{
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid #8B0000;
+        margin: .5rem 2rem;
+    }
+
+    .header-subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font1);
+    }
+
+    .rules-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: #fff;
+        background: #373737;
+        margin: 2rem 0;
+        padding: 2rem 0;
+    }
+
+    .rules-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .rules-title > h4{
+        font-family: var(--font2);
+        font-size: 1.4rem;
+    }
+
+    .rules-items {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    .rules-items li{
+        font-family: var(--font2);
+        list-style-type: none;
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 1rem;
+    }
+
+    .button-wrapper a{
+        background: #8B0000;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        color: #fff;
+        font-family: var(--font2);
+        transition: all 1s;
+    }
+
+    .button-wrapper a:hover{
+        background: #FF8C00;
+    }
+
+    .button-wrapper a:focus{
+       transform: scale(1.2);
+    }
+
+    .question-wrapper {
+        background: #373737;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 1rem;
+        padding: 1.6rem 0;
+        border-radius: 15px;
+    }
+
+    @media (min-width:1025px) {
+        .rules-items {
+            font-size: 1.2rem;
+        }
+
+        .rules-title > h4 {
+            font-size: 1.6rem;
+        }
+    }
+</style>

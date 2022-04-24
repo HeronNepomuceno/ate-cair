@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <title>Até Cair | Player Drink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="header-banner">
+            <h1 class="header-title">Até <br> Cair</h1>
+            <span id="header-icon"class="iconify" data-icon="twemoji:clinking-beer-mugs"></span>
+        </div>
+
+        <div class="separator">
+            <hr>
+        </div>
+
+        <div class="header-subtitle">
+            <h2>Perguntas e Respostas</h2>
+        </div>
+    </header>
+
+    <section class="action-wrapper">
+        <div class="action-info">
+            <span>Para gerar as perguntas, clique no botão <b style="color: red;">VERMELHO!</b></span>
+            <span>Para visualizar as regras novamente, <a href="index.html" style="color: #FF8C00;"><b>CLIQUE AQUI</b></a>.</span>
+        </div>
+        <div class="action-question">
+            <span id="resultado"></span>
+        </div>
+    </section>
+
+    <section class="button-wrapper">
+        <a onclick="apertar()">Gerar Desafio</a>
+    </section>
+</body>
+</html>
+
+<script>
+    var list = 
+    ['Escolha 2 pessoas, cada uma delas bebe 1 shot.',
+    'Quem estiver usando camisa preta, bebe 2 shots. Se não houver ninguém, todos bebem 1 shot.',
+    'Você deve imitar um animal! Quem acertar primeiro qual animal é aquele, não bebe, e todos resto deve beber 1 shot.',
+    'Escolha 2 pessoas, aquelas pessoas bebem 1 shot cada uma, e devem ir sozinhas para um quarto ondem devem ficar lá dentro por 2 minutos.',
+    'Dê um abraço na pessoa que você menos tem intimidade na roda, vocês bebem um shot cada uma.',
+    'Faça uma queda de braço com a pessoa na sua direita. Quem perder, bebe 2 shot e quem ganhar, bebe 1 shot.',
+    'Troque de camisa com a pessoa a sua esquerda, a pessoa sua esquerda bebe um shot.',
+    'Escolha mais 2 pessoas para jogarem pedra, papel e tesoura. A vencedora escolhe alguém para tomar 1 shot.',
+    'Pague 10 flexões, se você conseguir, você pode escolher alguém para tomar 1 shot, caso não, você bebe 1 shot.',
+    'Fique de mãos dadas com a pessoa a sua frente durante as próximas 3 rodadas, vocês bebem 1 shot cada uma.',
+    'Todos solteiros da roda devem beber 1 shot.'];
+
+    var res = document.getElementById('resultado')
+
+    function apertar() {
+        var x = parseInt(Math.random() * list.length)
+        res.innerHTML = list[x]
+        list.splice(x, 1)
+        console.log(list)
+        if(list.length <= 0){
+            list = ['Escolha 2 pessoas, cada uma delas bebe 1 shot.',
+                'Quem estiver usando camisa preta, bebe 2 shots. Se não houver ninguém, todos bebem 1 shot.',
+                'Você deve imitar um animal! Quem acertar primeiro qual animal é aquele, não bebe, e todos resto deve beber 1 shot.',
+                'Escolha 2 pessoas, aquelas pessoas bebem 1 shot cada uma, e devem ir sozinhas para um quarto ondem devem ficar lá dentro por 2 minutos.',
+                'Dê um abraço na pessoa que você menos tem intimidade na roda, vocês bebem um shot cada uma.',
+                'Faça uma queda de braço com a pessoa na sua direita. Quem perder, bebe 2 shot e quem ganhar, bebe 1 shot.',
+                'Troque de camisa com a pessoa a sua esquerda, a pessoa sua esquerda bebe um shot.',
+                'Escolha mais 2 pessoas para jogarem pedra, papel e tesoura. A vencedora escolhe alguém para tomar 1 shot.',
+                'Pague 10 flexões, se você conseguir, você pode escolher alguém para tomar 1 shot, caso não, você bebe 1 shot.',
+                'Fique de mãos dadas com a pessoa a sua frente durante as próximas 3 rodadas, vocês bebem 1 shot cada uma.',
+                'Todos solteiros da roda devem beber 1 shot.'];
+        }
+    }
+    
+    
+       
+
+
+  
+</script>
+
+<style>
+
+:root {
+    --font1: 'Indie Flower', serif;
+    --font2: 'Lato', serif;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin-top: 1rem;
+        background: #121212;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    button {
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        color: #fff;
+    }
+
+    .header-title {
+        font-family: var(--font1);
+    }
+
+    .header-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-banner > h2{
+        font-family: var(--font1);
+        font-size: 3rem;
+    }
+
+    .header-banner > svg{
+        font-size: 5.5rem;
+    }
+
+    .separator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .separator > hr{
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid #8B0000;
+        margin: .5rem 2rem;
+    }
+
+    .header-subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font1);
+    }
+
+    .action-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 0;
+        margin: 2rem 0;
+        color: #fff;
+        font-family: var(--font2);
+        font-weight: 500;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .action-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: #373737;
+        width: 100%;
+    }
+
+    .action-info > span{
+        font-size: .9rem;
+        margin: .5rem;
+    }
+
+    .action-question {
+        background: #373737;
+        color: #fff;
+        font-family: var(--font1);
+        margin-top: 4rem;
+        width: 90%;
+        word-break: break-all;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+
+    .action-question span{
+        margin: 1rem .8rem;
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 1rem;
+    }
+
+    .button-wrapper a{
+        background: #8B0000;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        color: #fff;
+        font-family: var(--font2);
+        transition: all 1s;
+    }
+
+    .button-wrapper a:hover{
+        background: #FF8C00;
+    }
+
+    .button-wrapper a:focus{
+       transform: scale(1.2);
+    }
+
+    @media (min-width:1025px){
+        .action-info {
+            width: 80%;
+            padding: 1rem 0;
+            border-radius: 15px;
+        }
+
+        .action-info > span {
+            font-size: 1.4rem;
+        }
+
+        .action-question {
+            width: 70%;
+            border: 1px solid #FF8C00;
+        }
+    }
+</style>
